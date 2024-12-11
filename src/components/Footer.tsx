@@ -87,8 +87,8 @@ const items: CollapseProps["items"] = [
 
 const Footer = () => {
     return (
-        <footer className="w-full h-max mt-10 bg-[#333333] px-10 phone:px-0 py-10 flex flex-col gap-6">
-            <div className="w-full phone:hidden max flex gap-8 justify-between px-10 phone:px-0 text-white text-sm">
+        <footer className="w-full h-max mt-10 bg-[#333333] px-32 phone:px-0 py-10 flex flex-col gap-6">
+            <div className="w-full phone:hidden max flex gap-8 justify-between phone:px-0 text-white text-sm">
                 <div className="w-1/6 h-max flex flex-col gap-5">
                     <p className="font-semibold">Contact Us</p>
                     <div className="flex gap-3 justify-between">

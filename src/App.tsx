@@ -6,6 +6,11 @@ import Login from "./pages/Login";
 import AppStructure from "./components/AppStructure";
 import Cart from "./pages/Cart";
 import HomeStructure from "./pages/home/HomeStructure";
+import DynamicCollectionsHome from "./pages/collections/DynamicCollectionsHome";
+import Profile from "./pages/profile/Profile";
+import MyOrders from "./pages/profile/MyOrders";
+import MyInfo from "./pages/profile/MyInfo";
+import Wishlist from "./pages/Wishlist";
 
 const App = () => {
     const router = createBrowserRouter([
@@ -23,34 +28,26 @@ const App = () => {
                     element: <Cart />,
                 },
                 {
-                    path: "collections",
-                    element: <Cart />,
-                    children:[
+                    path: "wishlist",
+                    element: <Wishlist />,
+                },
+                {
+                    path: "collections/:slug",
+                    element: <DynamicCollectionsHome />,
+                },
+                {
+                    path: "account",
+                    element: <Profile />,
+                    children: [
                         {
-                            path:"all-sneakers",
-                            element: <AppStructure/>
+                            path: "my-orders",
+                            element: <MyOrders />,
                         },
                         {
-                            path:"shoes",
-                            element: <AppStructure/>
+                            path: "my-informations",
+                            element: <MyInfo />,
                         },
-                        {
-                            path:"streetwears",
-                            element: <AppStructure/>
-                        },
-                        {
-                            path:"accessories",
-                            element: <AppStructure/>
-                        },
-                        {
-                            path:"new",
-                            element: <AppStructure/>
-                        },
-                        {
-                            path:"quick-delivery",
-                            element: <AppStructure/>
-                        },
-                    ]
+                    ],
                 },
             ],
         },
