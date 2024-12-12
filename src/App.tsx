@@ -12,6 +12,9 @@ import MyOrders from "./pages/profile/MyOrders";
 import MyInfo from "./pages/profile/MyInfo";
 import Wishlist from "./pages/Wishlist";
 import Search from "./pages/Search";
+import DeliveryAddress from "./pages/profile/DeliveryAddress";
+import LoyaltyProgramm from "./pages/profile/LoyaltyProgramm";
+import GiftCards from "./pages/profile/GiftCards";
 
 const App = () => {
     const router = createBrowserRouter([
@@ -49,8 +52,20 @@ const App = () => {
                             element: <MyOrders />,
                         },
                         {
-                            path: "my-informations",
+                            path: "my-profile",
                             element: <MyInfo />,
+                        },
+                        {
+                            path: "my-delivery-address",
+                            element: <DeliveryAddress />,
+                        },
+                        {
+                            path: "loyalty-program",
+                            element: <LoyaltyProgramm />,
+                        },
+                        {
+                            path: "gift-card",
+                            element: <GiftCards />,
                         },
                     ],
                 },
