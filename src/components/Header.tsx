@@ -3,7 +3,7 @@
 import logo from "../assets/logo1.png";
 import {CiBag1, CiHeart, CiMenuBurger, CiSearch, CiUser} from "react-icons/ci";
 import {useEffect, useState} from "react";
-import {Link, NavLink} from "react-router";
+import {Link, NavLink, useNavigate} from "react-router";
 import {Drawer} from "antd";
 import {IoIosArrowRoundBack} from "react-icons/io";
 import {TbLetterX} from "react-icons/tb";
@@ -13,6 +13,7 @@ import sneakerImg from "../assets/menuimgs/sneakerscoverimg.webp";
 
 const Header = () => {
     const [scrolled, setScrolled] = useState(false);
+    const Navigate = useNavigate()
 
     useEffect(() => {
         const handleScroll = () => {
@@ -105,6 +106,7 @@ const Header = () => {
                                     type="text"
                                     className="w-[30rem] rounded border-none outline-none "
                                     placeholder="search for a brand, a model..."
+                                    onFocus={()=>Navigate('/search')}
                                 />
                                 <CiSearch size={20} />
                             </div>

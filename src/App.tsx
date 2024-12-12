@@ -11,6 +11,7 @@ import Profile from "./pages/profile/Profile";
 import MyOrders from "./pages/profile/MyOrders";
 import MyInfo from "./pages/profile/MyInfo";
 import Wishlist from "./pages/Wishlist";
+import Search from "./pages/Search";
 
 const App = () => {
     const router = createBrowserRouter([
@@ -30,6 +31,10 @@ const App = () => {
                 {
                     path: "wishlist",
                     element: <Wishlist />,
+                },
+                {
+                    path: "search/:q?",
+                    element: <Search />,
                 },
                 {
                     path: "collections/:slug",

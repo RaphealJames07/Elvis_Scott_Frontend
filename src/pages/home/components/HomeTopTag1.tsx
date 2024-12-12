@@ -47,7 +47,7 @@ const HomeTopTag1 = () => {
 
     return (
         <div
-            className="my-8 overflow-hidden px-20"
+            className="my-8 overflow-hidden px-20 phone:pl-4"
             onMouseLeave={handleMouseUp} // Handle edge cases
             ref={containerRef} // Reference for the container
         >

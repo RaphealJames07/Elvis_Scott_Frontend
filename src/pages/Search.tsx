@@ -2,10 +2,10 @@
 
 import {Collapse, CollapseProps, Drawer, Input, Pagination, Select} from "antd";
 import {useState} from "react";
-import "./collection.css";
-import MilitaryBlue from "../../assets/sneakers/air-jordan-4-sail-metallic-gold3.webp";
-import fortycard from "../../assets/new-picto-48h.svg";
-import HomeTopTag1 from "../home/components/HomeTopTag1";
+import "./collections/collection.css";
+import MilitaryBlue from "../assets/sneakers/air-jordan-4-sail-metallic-gold3.webp";
+import fortycard from "../assets/new-picto-48h.svg";
+// import {useSearchParams} from "react-router";
 
 const items: CollapseProps["items"] = [
     {
@@ -222,16 +222,34 @@ const items: CollapseProps["items"] = [
     },
 ];
 
-const DynamicCollectionsHome = () => {
+const Search = () => {
     // const {slug} = useParams()
     const [openFilter, setOpenFilter] = useState<boolean>(false);
+
+    // const [searchParams, setSearchParams] = useSearchParams();
+
+    // // get query
+    // const myParam = searchParams.get("q");
+    // console.log(myParam);
+
+    // // set query
+    // const setSearch = () => {
+    //     setSearchParams({
+    //         q: "testd",
+    //     });
+    // };
+
+    // // clear / remove
+    // const remSearch = () => {
+    //   setSearchParams((params) => {
+    //     params.delete('q');
+    //     return params;
+    //   });
+    // };
+
     return (
         <>
             <div className="w-full h-max phone:mt-16 px-32 phone:px-4 pt-10 flex flex-col gap-8">
-                <div className="w-full h-max flex flex-col ">
-                  <p className="text-3xl ">All the Sneakers</p>
-                  <HomeTopTag1/>
-                </div>
                 <div className="w-full h-max py-2 px-2 border-y border-gray-300 flex justify-between items-center">
                     <p className="text-gray-400">
                         <span className="text-gray-800">2727 Results</span>
@@ -263,7 +281,11 @@ const DynamicCollectionsHome = () => {
                                 <span className="w-max h-max absolute right-3 top-3">
                                     <img src={fortycard} alt="" />
                                 </span>
-                                <img src={MilitaryBlue} alt="" className="h-80 object-contain phone:h-44" />
+                                <img
+                                    src={MilitaryBlue}
+                                    alt=""
+                                    className="h-80 object-contain phone:h-44"
+                                />
                             </div>
                             <p className="font-medium text-sm">
                                 Nike metallic blue
@@ -279,7 +301,11 @@ const DynamicCollectionsHome = () => {
                                 <span className="w-max h-max absolute right-3 top-3">
                                     <img src={fortycard} alt="" />
                                 </span>
-                                <img src={MilitaryBlue} alt="" className="h-80 object-contain phone:h-44" />
+                                <img
+                                    src={MilitaryBlue}
+                                    alt=""
+                                    className="h-80 object-contain phone:h-44"
+                                />
                             </div>
                             <p className="font-medium text-sm">
                                 Nike metallic blue
@@ -289,14 +315,21 @@ const DynamicCollectionsHome = () => {
                             </p>
                         </div>
                     </div>
-                    <a href="/collections/adidas" className="styles_LifestyleCard__uWrg_"></a>
+                    <a
+                        href="/collections/adidas"
+                        className="styles_LifestyleCard__uWrg_"
+                    ></a>
                     <div className="styles_card__GmAAu">
                         <div>
                             <div className="w-full h-auto relative bg-[#f5f5f5]  mb-3">
                                 <span className="w-max h-max absolute right-3 top-3">
                                     <img src={fortycard} alt="" />
                                 </span>
-                                <img src={MilitaryBlue} alt="" className="h-80 object-contain phone:h-44" />
+                                <img
+                                    src={MilitaryBlue}
+                                    alt=""
+                                    className="h-80 object-contain phone:h-44"
+                                />
                             </div>
                             <p className="font-medium text-sm">
                                 Nike metallic blue
@@ -312,7 +345,11 @@ const DynamicCollectionsHome = () => {
                                 <span className="w-max h-max absolute right-3 top-3">
                                     <img src={fortycard} alt="" />
                                 </span>
-                                <img src={MilitaryBlue} alt="" className="h-80 object-contain phone:h-44" />
+                                <img
+                                    src={MilitaryBlue}
+                                    alt=""
+                                    className="h-80 object-contain phone:h-44"
+                                />
                             </div>
                             <p className="font-medium text-sm">
                                 Nike metallic blue
@@ -412,8 +449,7 @@ const DynamicCollectionsHome = () => {
                     </div>
                 </div>
                 <div className="w-full h-20 flex items-center justify-center">
-
-                <Pagination />
+                    <Pagination />
                 </div>
             </div>
             <Drawer
@@ -455,4 +491,4 @@ const DynamicCollectionsHome = () => {
     );
 };
 
-export default DynamicCollectionsHome;
+export default Search;
