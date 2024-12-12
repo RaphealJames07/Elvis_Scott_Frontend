@@ -11,7 +11,7 @@ export interface generalSettingsState {
     description: string;
 }
 
-const MyInfo = () => {
+const UserProfile = () => {
     const userData = {
         firstName: "John Doe",
         lastName: "skjdnj",
@@ -43,7 +43,7 @@ const MyInfo = () => {
                 address: userData.address,
             });
         }
-    }, [userData]);
+    }, []);
 
     const toggleEditMode = () => {
         setState((prevState) => ({
@@ -222,4 +222,4 @@ const MyInfo = () => {
     );
 };
 
-export default MyInfo;
+export default UserProfile;

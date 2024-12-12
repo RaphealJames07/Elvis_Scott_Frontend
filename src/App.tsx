@@ -9,12 +9,13 @@ import HomeStructure from "./pages/home/HomeStructure";
 import DynamicCollectionsHome from "./pages/collections/DynamicCollectionsHome";
 import Profile from "./pages/profile/Profile";
 import MyOrders from "./pages/profile/MyOrders";
-import MyInfo from "./pages/profile/MyInfo";
 import Wishlist from "./pages/Wishlist";
 import Search from "./pages/Search";
 import DeliveryAddress from "./pages/profile/DeliveryAddress";
 import LoyaltyProgramm from "./pages/profile/LoyaltyProgramm";
 import GiftCards from "./pages/profile/GiftCards";
+import OrderHistoryInfo from "./pages/profile/OrderHistoryInfo";
+import UserProfile from "./pages/profile/UserProfile";
 
 const App = () => {
     const router = createBrowserRouter([
@@ -44,6 +45,10 @@ const App = () => {
                     element: <DynamicCollectionsHome />,
                 },
                 {
+                    path: "my-order/:slug",
+                    element: <OrderHistoryInfo />,
+                },
+                {
                     path: "account",
                     element: <Profile />,
                     children: [
@@ -52,8 +57,8 @@ const App = () => {
                             element: <MyOrders />,
                         },
                         {
-                            path: "my-profile",
-                            element: <MyInfo />,
+                            path: "user-profile",
+                            element: <UserProfile />,
                         },
                         {
                             path: "my-delivery-address",
