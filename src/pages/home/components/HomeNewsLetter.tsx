@@ -1,6 +1,6 @@
 const HomeNewsLetter = () => {
     return (
-        <div className="w-full h-max px-20 phone:px-4 mt-20 ">
+        <div className="w-full h-max px-20 phone:px-4 mt-20 phone:mt-10 ">
             <div className="w-full h-max flex flex-col items-center gap-4 bg-gray-300 p-4">
                 <p className="text-2xl">ElvisScott Newsletter</p>
                 <p className="text-center">
